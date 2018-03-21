@@ -1,0 +1,12 @@
+[Unit]
+Description=Home Assistant
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+ExecStart=/home/pi/services/hass/bin/hass --config=/home/pi/services/hass --open-ui --log-rotate-days=3 --log-file=/home/pi/services/hass/log.log
+
+[Install]
+WantedBy=multi-user.target

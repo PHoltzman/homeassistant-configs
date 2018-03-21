@@ -1,0 +1,14 @@
+[Unit]
+Description=Sunrise Wakeup Light
+After=network-online.target
+
+[Service]
+Type=simple
+User=pi
+Group=pi
+Environment="PATH=/home/pi/services/sunrise/bin"
+WorkingDirectory=/home/pi/services/sunrise/src
+ExecStart=/home/pi/services/sunrise/bin/gunicorn -w 1 -b 0.0.0.0:8081 --timeout 10 Sunrise:app
+
+[Install]
+WantedBy=multi-user.target

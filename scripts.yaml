@@ -1,0 +1,463 @@
+toggle_power:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42422261
+        command: PowerToggle
+
+tv_kodi_input_tv_chromecast:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_tv_dvd:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 2
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_tv_kodi:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 3
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_tv_xbox:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 4
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_chromecast_tv:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_chromecast_dvd:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_chromecast_kodi:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 2
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_chromecast_xbox:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 3
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_dvd_chromecast:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_dvd_tv:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 2
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_dvd_kodi:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_dvd_xbox:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 2
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_kodi_tv:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 3
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_kodi_chromecast:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 2
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_kodi_dvd:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_kodi_xbox:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionDown
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_xbox_tv:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 4
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_kodi_input_xbox_chromecast:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 3
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_xbox_dvd:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 2
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+        
+tv_kodi_input_xbox_kodi:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Source
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        delay_secs: 0.1
+        command: DirectionUp
+        num_repeats: 1
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: OK
+
+tv_mute:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: Mute
+
+fox:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: ["3", "1", ".", "1"]
+
+cbs:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: ["4", ".", "1"]
+
+abc:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: ["7", ".", "1"]
+
+nbc:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: ["9", ".", "1"]
+
+justice:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: ["9", ".", "3"]
+
+ion:
+  sequence:
+    - service: remote.send_command
+      data:
+        entity_id: remote.harmony_hub
+        device: 42373704
+        command: ["5", "9", ".", "1"]

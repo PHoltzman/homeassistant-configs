@@ -1,0 +1,77 @@
+ChangeChannelIntent:
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: script.{{ channel }}
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+
+ChangeTvInputIntent:
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: script.tv_kodi_input_{{ from_input.lower() }}_{{ to_input.lower() }}
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+
+ChangeVolumeIntent:
+  action:
+    service: remote.send_command
+    data:
+      entity_id: remote.harmony_hub
+      device: 42373704
+      delay_secs: 0.1
+    data_template:
+      num_repeats: "{{ quant }}"
+      command:
+        - >
+            {%- if direction == "up" -%}
+              VolumeUp
+            {%- else -%}
+              VolumeDown
+            {%- endif -%}
+      
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+
+TvPowerIntent:
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: script.toggle_power
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+
+TvMuteIntent:
+  action:
+    service: script.turn_on
+    data_template:
+      entity_id: script.tv_mute
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
+    
+KodiNowPlayingIntent:
+  speech:
+    type: plain
+    text: > 
+      {%- if states.media_player.kodi.state in ['playing', 'paused'] and states.media_player.kodi.attributes.media_content_type == 'music' -%}
+        It is {{ states.media_player.kodi.attributes.media_title }} by {{ states.media_player.kodi.attributes.media_artist }} from {{ states.media_player.kodi.attributes.media_album_name }}
+      {%- elif states.media_player.kodi.state in ['playing', 'paused'] and (states.media_player.kodi.attributes.media_content_type in ['movie', 'video']) -%}
+        It is {{ states.media_player.kodi.attributes.media_title }}
+      {%- else -%}
+        Nothing is playing
+      {%- endif -%}
+      
+PauseResumeChromecastIntent:
+  action:
+    service: media_player.media_play_pause
+    data:
+      entity_id: media_player.chromecast
+  speech:
+    type: plain
+    text: !include alexa_confirm.yaml
